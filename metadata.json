@@ -1,0 +1,6 @@
+{
+  "name": "HORON PHONE",
+  "description": "Immersive premium technology showroom and e-commerce store in Bamako, Mali specializing in Apple, Samsung, Tecno, Infinix, and Xiaomi / Redmi devices.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

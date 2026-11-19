@@ -1,0 +1,1005 @@
+{
+  "siteConfig": {
+    "heroHeadline": "LA TECHNOLOGIE RENCONTRE L'ÉLÉGANCE.",
+    "heroSubtitle": "Découvrez la technologie qui fait avancer votre monde.",
+    "appleHeadline": "PENSEZ DIFFÉRENT. VIVEZ PLUS.",
+    "appleDescription": "Découvrez l'univers Apple entre innovation, performance et design intemporel.",
+    "samsungHeadline": "PROPULSEZ VOTRE PROCHAINE EXPÉRIENCE.",
+    "samsungDescription": "Découvrez l'innovation Samsung Galaxy, la puissance et l'intelligence au quotidien.",
+    "tabletsHeadline": "PLUS D'ESPACE. PLUS DE POSSIBILITÉS.",
+    "tabletsDescription": "Découvrez des tablettes puissantes conçues pour la productivité, la créativité et le divertissement.",
+    "showroomHeadline": "TROUVEZ VOTRE PROCHAIN APPAREIL.",
+    "whyHeadline": "PLUS QU'UN TÉLÉPHONE. UNE MEILLEURE EXPÉRIENCE.",
+    "finalCtaHeadline": "VOTRE PROCHAIN APPAREIL COMMENCE ICI.",
+    "finalCtaSubtitle": "Découvrez votre technologie préférée chez HORON PHONE.",
+    "bannerEnabled": false,
+    "bannerText": "",
+    "whatsappNumber": "",
+    "storeAddress": "Bamako, Mali",
+    "storeHours": "Lun – Sam · 09:00 – 20:00",
+    "enabledPaymentMethods": [
+      "Paiement à la livraison (Bamako)",
+      "Paiement en boutique — Showroom Bamako"
+    ],
+    "trustPillars": [
+      {
+        "id": "tp-1",
+        "title": "Produits de qualité",
+        "description": "Chaque smartphone et tablette provient de circuits vérifiés et est contrôlé avant livraison.",
+        "icon": "shield"
+      },
+      {
+        "id": "tp-2",
+        "title": "Plusieurs marques internationales",
+        "description": "Comparez Apple, Samsung, Tecno, Infinix et Xiaomi / Redmi dans un même showroom.",
+        "icon": "layers"
+      },
+      {
+        "id": "tp-3",
+        "title": "Accompagnement personnalisé",
+        "description": "Des conseils adaptés à votre usage quotidien, votre capacité de stockage et votre budget à Bamako.",
+        "icon": "user"
+      },
+      {
+        "id": "tp-4",
+        "title": "Achat sécurisé",
+        "description": "Tarifs transparents en FCFA, confirmation écrite de commande et options de paiement locales.",
+        "icon": "lock"
+      },
+      {
+        "id": "tp-5",
+        "title": "Support client dédié",
+        "description": "Assistance directe via WhatsApp, appel téléphonique ou en boutique après votre achat.",
+        "icon": "headphones"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "cat-smartphones",
+      "name": "Smartphones",
+      "slug": "smartphones",
+      "order": 1
+    },
+    {
+      "id": "cat-tablets",
+      "name": "Tablettes",
+      "slug": "tablettes",
+      "order": 2
+    },
+    {
+      "id": "cat-audio",
+      "name": "AirPods & Écouteurs",
+      "slug": "airpods-ecouteurs",
+      "order": 3
+    },
+    {
+      "id": "cat-chargers",
+      "name": "Chargeurs",
+      "slug": "chargeurs",
+      "order": 4
+    },
+    {
+      "id": "cat-accessories",
+      "name": "Accessoires",
+      "slug": "accessoires",
+      "order": 5
+    }
+  ],
+  "brands": [
+    {
+      "id": "brand-apple",
+      "name": "Apple",
+      "slug": "apple",
+      "headline": "Titane de précision & Puissance Apple Silicon",
+      "description": "Gamme complète Apple : des tout derniers iPhone jusqu'aux modèles classiques, iPad, AirPods et chargeurs officiels.",
+      "deviceStyle": "apple",
+      "imageUrl": "/src/assets/images/horon_iphone_pro_1795008052838.jpg",
+      "active": true,
+      "order": 1
+    },
+    {
+      "id": "brand-samsung",
+      "name": "Samsung",
+      "slug": "samsung",
+      "headline": "Galaxy Intelligence & Dynamic AMOLED",
+      "description": "Smartphones Galaxy S et série A, tablettes Galaxy Tab, Galaxy Buds et chargeurs rapides Samsung.",
+      "deviceStyle": "samsung",
+      "imageUrl": "/src/assets/images/horon_samsung_ultra_1795008052584.jpg",
+      "active": true,
+      "order": 2
+    },
+    {
+      "id": "brand-tecno",
+      "name": "TECNO",
+      "slug": "tecno",
+      "headline": "Optique portrait & Endurance quotidienne",
+      "description": "Séries Camon, Phantom et Spark, tablettes Megapad et accessoires de charge rapide TECNO.",
+      "deviceStyle": "tecno",
+      "imageUrl": "/src/assets/images/horon_tecno_infinix_1795008052857.jpg",
+      "active": true,
+      "order": 3
+    },
+    {
+      "id": "brand-infinix",
+      "name": "INFINIX",
+      "slug": "infinix",
+      "headline": "Charge rapide & Écrans fluides AMOLED",
+      "description": "Smartphones Zero, Note et Hot, tablettes Xpad, écouteurs sans fil et chargeurs Infinix.",
+      "deviceStyle": "infinix",
+      "imageUrl": "/src/assets/images/horon_tecno_infinix_1795008052857.jpg",
+      "active": true,
+      "order": 4
+    },
+    {
+      "id": "brand-xiaomi",
+      "name": "XIAOMI / REDMI",
+      "slug": "xiaomi-redmi",
+      "headline": "Maîtrise optique & Performance équilibrée",
+      "description": "Smartphones Xiaomi et Redmi Note, tablettes Redmi Pad, Redmi Buds et chargeurs HyperCharge.",
+      "deviceStyle": "xiaomi",
+      "imageUrl": "/src/assets/images/horon_xiaomi_redmi_1795008052902.jpg",
+      "active": true,
+      "order": 5
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-iphone-18-pro-max",
+      "name": "iPhone 18 Pro Max 256 Go — Titane Naturel",
+      "brand": "Apple",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 980000,
+      "stock": 4,
+      "availability": "In Stock",
+      "description": "Modèle phare Apple nouvelle génération avec châssis en titane brossé, écran ProMotion 120 Hz et triple capteur optique avancé.",
+      "specs": {
+        "storage": "256 Go",
+        "display": "6.9\" Super Retina XDR 120 Hz",
+        "camera": "Triple capteur 48 MP Pro",
+        "chip": "Puce Apple série Pro",
+        "battery": "Autonomie longue durée"
+      },
+      "imageUrl": "/src/assets/images/horon_iphone_pro_1795008052838.jpg",
+      "featured": true,
+      "popular": true,
+      "createdAt": "2026-11-18T10:00:00.000Z"
+    },
+    {
+      "id": "prod-iphone-18-pro",
+      "name": "iPhone 18 Pro 256 Go — Titane Naturel",
+      "brand": "Apple",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 895000,
+      "stock": 5,
+      "availability": "In Stock",
+      "description": "Format Pro ergonomique en titane de précision avec puce Apple nouvelle génération et triple optique 48 MP.",
+      "specs": {
+        "storage": "256 Go",
+        "display": "6.3\" Super Retina XDR 120 Hz",
+        "camera": "Triple capteur 48 MP Pro",
+        "chip": "Puce Apple série Pro",
+        "battery": "Autonomie journée complète"
+      },
+      "imageUrl": "/src/assets/images/horon_iphone_pro_1795008052838.jpg",
+      "featured": true,
+      "popular": true,
+      "createdAt": "2026-11-18T09:00:00.000Z"
+    },
+    {
+      "id": "prod-iphone-18-plus",
+      "name": "iPhone 18 Plus 256 Go — Titane Argent",
+      "brand": "Apple",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 790000,
+      "stock": 6,
+      "availability": "In Stock",
+      "description": "Grand écran OLED 6,7 pouces lumineux, autonomie record et double capteur photo haute précision.",
+      "specs": {
+        "storage": "256 Go",
+        "display": "6.7\" Super Retina XDR",
+        "camera": "Double capteur 48 MP Fusion",
+        "chip": "Puce Apple série 18",
+        "battery": "Autonomie prolongée"
+      },
+      "imageUrl": "/src/assets/images/horon_iphone_pro_1795008052838.jpg",
+      "featured": false,
+      "popular": true,
+      "createdAt": "2026-11-18T08:00:00.000Z"
+    },
+    {
+      "id": "prod-iphone-18",
+      "name": "iPhone 18 128 Go — Titane Ardoise",
+      "brand": "Apple",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 710000,
+      "stock": 7,
+      "availability": "In Stock",
+      "description": "Design affiné en aluminium et verre mat, puce fluide et système photo polyvalent au quotidien.",
+      "specs": {
+        "storage": "128 Go",
+        "display": "6.1\" Super Retina XDR",
+        "camera": "Double capteur 48 MP",
+        "chip": "Puce Apple série 18",
+        "battery": "Autonomie journée complète"
+      },
+      "imageUrl": "/src/assets/images/horon_iphone_pro_1795008052838.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-18T07:00:00.000Z"
+    },
+    {
+      "id": "prod-iphone-17-pro-max",
+      "name": "iPhone 17 Pro Max 256 Go — Titane Naturel",
+      "brand": "Apple",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 910000,
+      "stock": 4,
+      "availability": "In Stock",
+      "description": "Grand format 6,9 pouces ProMotion avec châssis en titane et téléobjectif périscopique avancé.",
+      "specs": {
+        "storage": "256 Go",
+        "display": "6.9\" Super Retina XDR 120 Hz",
+        "camera": "Triple capteur 48 MP Pro",
+        "chip": "A19 Pro",
+        "battery": "Autonomie maximale"
+      },
+      "imageUrl": "/src/assets/images/horon_iphone_pro_1795008052838.jpg",
+      "featured": true,
+      "popular": true,
+      "createdAt": "2026-11-17T11:00:00.000Z"
+    },
+    {
+      "id": "prod-iphone-17-pro",
+      "name": "iPhone 17 Pro 256 Go — Titane Naturel",
+      "brand": "Apple",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 860000,
+      "stock": 5,
+      "availability": "In Stock",
+      "description": "Design en titane de précision, écran OLED ultra-lumineux et système photo professionnel polyvalent.",
+      "specs": {
+        "storage": "256 Go",
+        "display": "6.3\" Super Retina XDR 120 Hz",
+        "camera": "Triple capteur 48 MP Fusion",
+        "chip": "A19 Pro",
+        "battery": "Journée complète"
+      },
+      "imageUrl": "/src/assets/images/horon_iphone_pro_1795008052838.jpg",
+      "featured": true,
+      "popular": true,
+      "createdAt": "2026-11-17T10:00:00.000Z"
+    },
+    {
+      "id": "prod-iphone-17-plus",
+      "name": "iPhone 17 Plus 256 Go — Titane Argent",
+      "brand": "Apple",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 740000,
+      "stock": 5,
+      "availability": "In Stock",
+      "description": "Grand écran OLED 6,7 pouces ultra-lumineux avec autonomie longue durée et double optique 48 MP.",
+      "specs": {
+        "storage": "256 Go",
+        "display": "6.7\" Super Retina XDR",
+        "camera": "Double capteur 48 MP Fusion",
+        "chip": "A19",
+        "battery": "Autonomie prolongée"
+      },
+      "imageUrl": "/src/assets/images/horon_iphone_pro_1795008052838.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-17T09:00:00.000Z"
+    },
+    {
+      "id": "prod-iphone-17",
+      "name": "iPhone 17 128 Go — Titane Noir",
+      "brand": "Apple",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 660000,
+      "stock": 6,
+      "availability": "In Stock",
+      "description": "Modèle phare équilibré avec puce A19 fluide, écran OLED précis et USB-C universel.",
+      "specs": {
+        "storage": "128 Go",
+        "display": "6.1\" Super Retina XDR",
+        "camera": "Double capteur 48 MP",
+        "chip": "A19",
+        "battery": "Journée complète"
+      },
+      "imageUrl": "/src/assets/images/horon_iphone_pro_1795008052838.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-17T08:00:00.000Z"
+    },
+    {
+      "id": "prod-iphone-16-pro",
+      "name": "iPhone 16 Pro 256 Go — Titane Naturel",
+      "brand": "Apple",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 785000,
+      "stock": 6,
+      "availability": "In Stock",
+      "description": "Titane grade 5 avec écran Super Retina XDR ProMotion 6,3 pouces et système photo Fusion 48 MP.",
+      "specs": {
+        "storage": "256 Go",
+        "display": "6.3\" Super Retina XDR 120 Hz",
+        "camera": "48 MP Triple Pro",
+        "chip": "A18 Pro",
+        "battery": "Autonomie journée complète"
+      },
+      "imageUrl": "/src/assets/images/horon_iphone_pro_1795008052838.jpg",
+      "featured": true,
+      "popular": true,
+      "createdAt": "2026-11-16T10:00:00.000Z"
+    },
+    {
+      "id": "prod-iphone-16-pro-max",
+      "name": "iPhone 16 Pro Max 256 Go — Titane Naturel",
+      "brand": "Apple",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 840000,
+      "stock": 4,
+      "availability": "In Stock",
+      "description": "Écran 6,9 pouces bord à bord, châssis en titane grade 5 et téléobjectif x5 professionnel.",
+      "specs": {
+        "storage": "256 Go",
+        "display": "6.9\" Super Retina XDR 120 Hz",
+        "camera": "48 MP Triple Pro x5",
+        "chip": "A18 Pro",
+        "battery": "Autonomie record"
+      },
+      "imageUrl": "/src/assets/images/horon_iphone_pro_1795008052838.jpg",
+      "featured": true,
+      "popular": true,
+      "createdAt": "2026-11-16T11:00:00.000Z"
+    },
+    {
+      "id": "prod-iphone-16",
+      "name": "iPhone 16 128 Go — Noir",
+      "brand": "Apple",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 575000,
+      "stock": 7,
+      "availability": "In Stock",
+      "description": "Commande de l’appareil photo tactile, puce A18 fluide et double capteur vertical Fusion 48 MP.",
+      "specs": {
+        "storage": "128 Go",
+        "display": "6.1\" Super Retina XDR",
+        "camera": "48 MP Fusion",
+        "chip": "A18",
+        "battery": "Autonomie journée complète"
+      },
+      "imageUrl": "/src/assets/images/horon_iphone_pro_1795008052838.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-16T09:00:00.000Z"
+    },
+    {
+      "id": "prod-iphone-15",
+      "name": "iPhone 15 128 Go — Titane Ardoise",
+      "brand": "Apple",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 495000,
+      "stock": 7,
+      "availability": "In Stock",
+      "description": "Dynamic Island, dos en verre teinté dans la masse, capteur principal 48 MP et connectique USB-C universelle.",
+      "specs": {
+        "storage": "128 Go",
+        "display": "6.1\" Super Retina XDR",
+        "camera": "Double capteur 48 MP",
+        "chip": "A16 Bionic",
+        "battery": "Autonomie toute la journée"
+      },
+      "imageUrl": "/src/assets/images/horon_iphone_pro_1795008052838.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-15T10:00:00.000Z"
+    },
+    {
+      "id": "prod-iphone-15-pro-max",
+      "name": "iPhone 15 Pro Max 256 Go — Titane Naturel",
+      "brand": "Apple",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 680000,
+      "stock": 4,
+      "availability": "In Stock",
+      "description": "Titane aérospatial léger avec puce A17 Pro, bouton Action personnalisable et zoom optique x5.",
+      "specs": {
+        "storage": "256 Go",
+        "display": "6.7\" Super Retina XDR 120 Hz",
+        "camera": "Triple capteur 48 MP Pro",
+        "chip": "A17 Pro",
+        "battery": "Autonomie étendue"
+      },
+      "imageUrl": "/src/assets/images/horon_iphone_pro_1795008052838.jpg",
+      "featured": false,
+      "popular": true,
+      "createdAt": "2026-11-15T11:00:00.000Z"
+    },
+    {
+      "id": "prod-iphone-13-pro",
+      "name": "iPhone 13 Pro 128 Go — Bleu Alpin",
+      "brand": "Apple",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 385000,
+      "stock": 5,
+      "availability": "In Stock",
+      "description": "Acier inoxydable chirurgical, écran ProMotion 120 Hz et triple optique macro haute précision.",
+      "specs": {
+        "storage": "128 Go",
+        "display": "6.1\" Super Retina XDR 120 Hz",
+        "camera": "Triple 12 MP Pro",
+        "chip": "A15 Bionic",
+        "battery": "Endurance fiable"
+      },
+      "imageUrl": "/src/assets/images/horon_iphone_pro_1795008052838.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-14T11:00:00.000Z"
+    },
+    {
+      "id": "prod-iphone-13",
+      "name": "iPhone 13 128 Go — Finition Classique",
+      "brand": "Apple",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 315000,
+      "stock": 8,
+      "availability": "In Stock",
+      "description": "Format compact fluide avec puce A15 Bionic, écran OLED lumineux et double appareil photo stabilisé.",
+      "specs": {
+        "storage": "128 Go",
+        "display": "6.1\" Super Retina XDR",
+        "camera": "Double 12 MP",
+        "chip": "A15 Bionic",
+        "battery": "Endurance fiable"
+      },
+      "imageUrl": "/src/assets/images/horon_iphone_pro_1795008052838.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-14T10:00:00.000Z"
+    },
+    {
+      "id": "prod-ipad-pro-m4",
+      "name": "Apple iPad Pro 11\" M4 256 Go — Argent",
+      "brand": "Apple",
+      "category": "Tablettes",
+      "productType": "tablet",
+      "priceXof": 650000,
+      "stock": 4,
+      "availability": "In Stock",
+      "description": "Châssis en aluminium anodisé ultra-fin de 5,3 mm avec écran OLED Ultra Retina XDR et architecture M4.",
+      "specs": {
+        "storage": "256 Go",
+        "display": "11\" Ultra Retina XDR OLED",
+        "camera": "12 MP + Scanner LiDAR",
+        "chip": "Apple M4",
+        "battery": "Jusqu'à 10 heures"
+      },
+      "imageUrl": "/src/assets/images/horon_ipad_pro_1795008052755.jpg",
+      "featured": true,
+      "popular": true,
+      "createdAt": "2026-11-13T10:00:00.000Z"
+    },
+    {
+      "id": "prod-airpods-pro-2",
+      "name": "Apple AirPods Pro (2e génération) USB-C",
+      "brand": "Apple",
+      "category": "AirPods & Écouteurs",
+      "productType": "accessory",
+      "priceXof": 145000,
+      "stock": 10,
+      "availability": "In Stock",
+      "description": "Réduction active du bruit haute précision, mode Transparence adaptatif et boîtier de charge MagSafe USB-C.",
+      "specs": {
+        "chip": "Puce H2",
+        "battery": "Jusqu'à 30h avec boîtier"
+      },
+      "imageUrl": "/src/assets/images/horon_airpods_audio_1795009755352.jpg",
+      "featured": false,
+      "popular": true,
+      "createdAt": "2026-11-12T10:00:00.000Z"
+    },
+    {
+      "id": "prod-apple-charger-20w",
+      "name": "Chargeur Rapide Apple USB-C 20W + Câble USB-C",
+      "brand": "Apple",
+      "category": "Chargeurs",
+      "productType": "accessory",
+      "priceXof": 22000,
+      "stock": 18,
+      "availability": "In Stock",
+      "description": "Adaptateur secteur officiel USB-C 20W compact offrant une charge rapide sécurisée pour iPhone et iPad.",
+      "specs": {
+        "battery": "Puissance 20W Power Delivery"
+      },
+      "imageUrl": "/src/assets/images/horon_charger_accessory_1795009753995.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-11T10:00:00.000Z"
+    },
+    {
+      "id": "prod-galaxy-s25-ultra",
+      "name": "Samsung Galaxy S25 Ultra 256 Go — Gris Titane",
+      "brand": "Samsung",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 720000,
+      "stock": 5,
+      "availability": "In Stock",
+      "description": "Châssis en titane de précision avec S Pen intégré, écran Dynamic AMOLED 2X 6,9 pouces et quadruple téléobjectif.",
+      "specs": {
+        "storage": "256 Go · 12 Go RAM",
+        "display": "6.9\" QHD+ Dynamic AMOLED 2X",
+        "camera": "Quadruple capteur 200 MP",
+        "chip": "Snapdragon Elite for Galaxy",
+        "battery": "5000 mAh"
+      },
+      "imageUrl": "/src/assets/images/horon_samsung_ultra_1795008052584.jpg",
+      "featured": true,
+      "popular": true,
+      "createdAt": "2026-11-10T10:00:00.000Z"
+    },
+    {
+      "id": "prod-galaxy-s25-plus",
+      "name": "Samsung Galaxy S25+ 256 Go — Argent Titane",
+      "brand": "Samsung",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 610000,
+      "stock": 6,
+      "availability": "In Stock",
+      "description": "Grand écran QHD+ Dynamic AMOLED 2X de 6,7 pouces avec Galaxy AI et triple capteur haute résolution.",
+      "specs": {
+        "storage": "256 Go · 12 Go RAM",
+        "display": "6.7\" QHD+ Dynamic AMOLED 2X",
+        "camera": "Triple capteur 50 MP",
+        "chip": "Snapdragon Elite for Galaxy",
+        "battery": "4900 mAh"
+      },
+      "imageUrl": "/src/assets/images/horon_samsung_ultra_1795008052584.jpg",
+      "featured": true,
+      "popular": true,
+      "createdAt": "2026-11-10T09:00:00.000Z"
+    },
+    {
+      "id": "prod-galaxy-s25",
+      "name": "Samsung Galaxy S25 128 Go — Bleu Glacier",
+      "brand": "Samsung",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 520000,
+      "stock": 7,
+      "availability": "In Stock",
+      "description": "Format compact haut de gamme avec écran 120 Hz lumineux, Galaxy AI et finitions verre et métal.",
+      "specs": {
+        "storage": "128 Go · 12 Go RAM",
+        "display": "6.2\" FHD+ Dynamic AMOLED 2X",
+        "camera": "Triple capteur 50 MP",
+        "chip": "Snapdragon Elite for Galaxy",
+        "battery": "4000 mAh"
+      },
+      "imageUrl": "/src/assets/images/horon_samsung_ultra_1795008052584.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-10T08:00:00.000Z"
+    },
+    {
+      "id": "prod-galaxy-a55",
+      "name": "Samsung Galaxy A55 5G 256 Go",
+      "brand": "Samsung",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 235000,
+      "stock": 9,
+      "availability": "In Stock",
+      "description": "Cadre métallique robuste, écran Super AMOLED 120 Hz et triple capteur photo stabilisé OIS.",
+      "specs": {
+        "storage": "256 Go · 8 Go RAM",
+        "display": "6.6\" FHD+ Super AMOLED 120 Hz",
+        "camera": "50 MP OIS Triple",
+        "chip": "Exynos 1480",
+        "battery": "5000 mAh"
+      },
+      "imageUrl": "/src/assets/images/horon_samsung_ultra_1795008052584.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-09T10:00:00.000Z"
+    },
+    {
+      "id": "prod-galaxy-a55-128",
+      "name": "Samsung Galaxy A55 5G 128 Go",
+      "brand": "Samsung",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 205000,
+      "stock": 10,
+      "availability": "In Stock",
+      "description": "Châssis aluminium brossé, écran Super AMOLED 120 Hz lumineux et triple appareil photo OIS.",
+      "specs": {
+        "storage": "128 Go · 8 Go RAM",
+        "display": "6.6\" FHD+ Super AMOLED 120 Hz",
+        "camera": "50 MP OIS Triple",
+        "chip": "Exynos 1480",
+        "battery": "5000 mAh"
+      },
+      "imageUrl": "/src/assets/images/horon_samsung_ultra_1795008052584.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-09T09:00:00.000Z"
+    },
+    {
+      "id": "prod-galaxy-tab-s10",
+      "name": "Samsung Galaxy Tab S10+ 256 Go + S Pen",
+      "brand": "Samsung",
+      "category": "Tablettes",
+      "productType": "tablet",
+      "priceXof": 540000,
+      "stock": 3,
+      "availability": "Low Stock",
+      "description": "Grand écran antireflet Dynamic AMOLED 2X de 12,4 pouces conçu pour le multitâche, la prise de notes et le studio.",
+      "specs": {
+        "storage": "256 Go · 12 Go RAM",
+        "display": "12.4\" Dynamic AMOLED 2X",
+        "camera": "13 MP + 8 MP",
+        "chip": "Dimensity 9300+",
+        "battery": "10090 mAh"
+      },
+      "imageUrl": "/src/assets/images/horon_galaxy_tab_1795008052790.jpg",
+      "featured": true,
+      "popular": true,
+      "createdAt": "2026-11-08T10:00:00.000Z"
+    },
+    {
+      "id": "prod-galaxy-buds-3",
+      "name": "Samsung Galaxy Buds3 Pro",
+      "brand": "Samsung",
+      "category": "AirPods & Écouteurs",
+      "productType": "accessory",
+      "priceXof": 115000,
+      "stock": 7,
+      "availability": "In Stock",
+      "description": "Audio Hi-Fi 24 bits, réduction de bruit adaptative et ergonomie affinée pour le confort quotidien.",
+      "specs": {
+        "battery": "Jusqu'à 30h avec boîtier"
+      },
+      "imageUrl": "/src/assets/images/horon_airpods_audio_1795009755352.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-07T10:00:00.000Z"
+    },
+    {
+      "id": "prod-samsung-charger-45w",
+      "name": "Chargeur Ultra Rapide Samsung 45W USB-C",
+      "brand": "Samsung",
+      "category": "Chargeurs",
+      "productType": "accessory",
+      "priceXof": 20000,
+      "stock": 15,
+      "availability": "In Stock",
+      "description": "Adaptateur Super Fast Charging 2.0 45W avec câble USB-C vers USB-C pour Galaxy S et Galaxy Tab.",
+      "specs": {
+        "battery": "45W Super Fast Charging 2.0"
+      },
+      "imageUrl": "/src/assets/images/horon_charger_accessory_1795009753995.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-06T10:00:00.000Z"
+    },
+    {
+      "id": "prod-tecno-camon-30-pro",
+      "name": "Tecno Camon 30 Premier 5G 512 Go",
+      "brand": "TECNO",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 285000,
+      "stock": 9,
+      "availability": "In Stock",
+      "description": "Module photo circulaire sculpté avec triple capteur portrait 50 MP, écran LTPO AMOLED et charge Ultra 70W.",
+      "specs": {
+        "storage": "512 Go · 12 Go RAM",
+        "display": "6.77\" 1.5K LTPO AMOLED 120 Hz",
+        "camera": "Triple 50 MP Sony IMX890",
+        "chip": "Dimensity 8200 Ultimate",
+        "battery": "5000 mAh · Charge 70W"
+      },
+      "imageUrl": "/src/assets/images/horon_tecno_infinix_1795008052857.jpg",
+      "featured": true,
+      "popular": true,
+      "createdAt": "2026-11-05T10:00:00.000Z"
+    },
+    {
+      "id": "prod-tecno-camon-30-5g",
+      "name": "Tecno Camon 30 Pro 5G 256 Go",
+      "brand": "TECNO",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 225000,
+      "stock": 8,
+      "availability": "In Stock",
+      "description": "Capteur principal Sony 50 MP OIS, écran AMOLED 144 Hz ultra-fluide et charge rapide 70W.",
+      "specs": {
+        "storage": "256 Go · 12 Go RAM",
+        "display": "6.78\" AMOLED 144 Hz",
+        "camera": "Triple 50 MP OIS",
+        "chip": "Dimensity 8200 Ultimate",
+        "battery": "5000 mAh · Charge 70W"
+      },
+      "imageUrl": "/src/assets/images/horon_tecno_infinix_1795008052857.jpg",
+      "featured": false,
+      "popular": true,
+      "createdAt": "2026-11-05T09:00:00.000Z"
+    },
+    {
+      "id": "prod-tecno-camon-30",
+      "name": "Tecno Camon 30 256 Go",
+      "brand": "TECNO",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 165000,
+      "stock": 10,
+      "availability": "In Stock",
+      "description": "Portrait lumineux 50 MP OIS, écran AMOLED 120 Hz élégant et endurance toute la journée.",
+      "specs": {
+        "storage": "256 Go · 8 Go RAM",
+        "display": "6.78\" AMOLED 120 Hz",
+        "camera": "50 MP OIS + Selfie 50 MP",
+        "chip": "Helio G99 Ultimate",
+        "battery": "5000 mAh · Charge 70W"
+      },
+      "imageUrl": "/src/assets/images/horon_tecno_infinix_1795008052857.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-05T08:00:00.000Z"
+    },
+    {
+      "id": "prod-tecno-megapad",
+      "name": "Tecno Megapad 11\" 256 Go",
+      "brand": "TECNO",
+      "category": "Tablettes",
+      "productType": "tablet",
+      "priceXof": 165000,
+      "stock": 6,
+      "availability": "In Stock",
+      "description": "Tablette grand format 11 pouces en alliage léger pour le streaming, les études et le travail mobile.",
+      "specs": {
+        "storage": "256 Go · 8 Go RAM",
+        "display": "11\" FHD+ 90 Hz",
+        "battery": "8000 mAh"
+      },
+      "imageUrl": "/src/assets/images/horon_galaxy_tab_1795008052790.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-04T10:00:00.000Z"
+    },
+    {
+      "id": "prod-infinix-zero-40",
+      "name": "Infinix Zero 40 5G 256 Go — Argent Titane",
+      "brand": "INFINIX",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 215000,
+      "stock": 11,
+      "availability": "In Stock",
+      "description": "Smartphone AMOLED incurvé 144 Hz conçu pour la création mobile avec stabilisation OIS 108 MP et charge sans fil.",
+      "specs": {
+        "storage": "256 Go · 12 Go RAM",
+        "display": "6.78\" AMOLED incurvé 144 Hz",
+        "camera": "108 MP OIS + 50 MP Ultra-Grand Angle",
+        "chip": "Dimensity 8200",
+        "battery": "5000 mAh · FastCharge 45W"
+      },
+      "imageUrl": "/src/assets/images/horon_tecno_infinix_1795008052857.jpg",
+      "featured": false,
+      "popular": true,
+      "createdAt": "2026-11-03T10:00:00.000Z"
+    },
+    {
+      "id": "prod-infinix-zero-40-4g",
+      "name": "Infinix Zero 40 256 Go — Titane",
+      "brand": "INFINIX",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 185000,
+      "stock": 9,
+      "availability": "In Stock",
+      "description": "Écran AMOLED incurvé 120 Hz, capteur 108 MP OIS stabilisé et charge rapide 45W.",
+      "specs": {
+        "storage": "256 Go · 8 Go RAM",
+        "display": "6.78\" AMOLED incurvé 120 Hz",
+        "camera": "108 MP OIS + 50 MP",
+        "chip": "Helio G100",
+        "battery": "5000 mAh · FastCharge 45W"
+      },
+      "imageUrl": "/src/assets/images/horon_tecno_infinix_1795008052857.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-03T09:00:00.000Z"
+    },
+    {
+      "id": "prod-infinix-note-40-pro",
+      "name": "Infinix Note 40 Pro+ 5G 256 Go",
+      "brand": "INFINIX",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 195000,
+      "stock": 8,
+      "availability": "In Stock",
+      "description": "Écran incurvé AMOLED 120 Hz, charge All-Round FastCharge 100W et finition premium.",
+      "specs": {
+        "storage": "256 Go · 12 Go RAM",
+        "display": "6.78\" AMOLED incurvé 120 Hz",
+        "camera": "108 MP OIS",
+        "chip": "Dimensity 7020",
+        "battery": "4600 mAh · Charge 100W"
+      },
+      "imageUrl": "/src/assets/images/horon_tecno_infinix_1795008052857.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-03T08:00:00.000Z"
+    },
+    {
+      "id": "prod-infinix-note-40",
+      "name": "Infinix Note 40 256 Go",
+      "brand": "INFINIX",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 155000,
+      "stock": 9,
+      "availability": "In Stock",
+      "description": "Écran AMOLED 120 Hz sans bordures, charge magnétique MagCharge et capteur principal 108 MP.",
+      "specs": {
+        "storage": "256 Go · 8 Go RAM",
+        "display": "6.78\" AMOLED 120 Hz",
+        "camera": "108 MP Super Zoom",
+        "chip": "Helio G99 Ultimate",
+        "battery": "5000 mAh · FastCharge 45W"
+      },
+      "imageUrl": "/src/assets/images/horon_tecno_infinix_1795008052857.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-03T07:00:00.000Z"
+    },
+    {
+      "id": "prod-infinix-xpad",
+      "name": "Infinix Xpad 11\" 256 Go",
+      "brand": "INFINIX",
+      "category": "Tablettes",
+      "productType": "tablet",
+      "priceXof": 155000,
+      "stock": 5,
+      "availability": "In Stock",
+      "description": "Châssis métallique fin, quadruple haut-parleur et grand écran fluide pour la productivité et le multimédia.",
+      "specs": {
+        "storage": "256 Go · 8 Go RAM",
+        "display": "11\" FHD+ 90 Hz",
+        "battery": "7000 mAh"
+      },
+      "imageUrl": "/src/assets/images/horon_ipad_pro_1795008052755.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-02T10:00:00.000Z"
+    },
+    {
+      "id": "prod-redmi-note-14-pro",
+      "name": "Xiaomi Redmi Note 14 Pro+ 256 Go — Obsidienne",
+      "brand": "XIAOMI / REDMI",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 245000,
+      "stock": 8,
+      "availability": "In Stock",
+      "description": "Châssis graphite mat certifié IP68, écran incurvé CrystalRes 1.5K et capteur principal stabilisé 200 MP.",
+      "specs": {
+        "storage": "256 Go · 8 Go RAM",
+        "display": "6.67\" 1.5K AMOLED 120 Hz",
+        "camera": "200 MP OIS",
+        "chip": "Snapdragon 7s Gen 3",
+        "battery": "5110 mAh"
+      },
+      "imageUrl": "/src/assets/images/horon_xiaomi_redmi_1795008052902.jpg",
+      "featured": true,
+      "popular": true,
+      "createdAt": "2026-11-01T10:00:00.000Z"
+    },
+    {
+      "id": "prod-redmi-note-14-pro-std",
+      "name": "Xiaomi Redmi Note 14 Pro 256 Go",
+      "brand": "XIAOMI / REDMI",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 205000,
+      "stock": 9,
+      "availability": "In Stock",
+      "description": "Écran AMOLED 120 Hz haute luminosité, capteur 200 MP OIS et grande autonomie 5500 mAh.",
+      "specs": {
+        "storage": "256 Go · 8 Go RAM",
+        "display": "6.67\" AMOLED 120 Hz",
+        "camera": "200 MP OIS",
+        "chip": "Dimensity 7300 Ultra",
+        "battery": "5500 mAh"
+      },
+      "imageUrl": "/src/assets/images/horon_xiaomi_redmi_1795008052902.jpg",
+      "featured": false,
+      "popular": true,
+      "createdAt": "2026-11-01T09:00:00.000Z"
+    },
+    {
+      "id": "prod-redmi-note-14",
+      "name": "Xiaomi Redmi Note 14 128 Go",
+      "brand": "XIAOMI / REDMI",
+      "category": "Smartphones",
+      "productType": "smartphone",
+      "priceXof": 155000,
+      "stock": 11,
+      "availability": "In Stock",
+      "description": "Écran AMOLED 120 Hz fluide, triple appareil photo 108 MP et batterie durable 5500 mAh.",
+      "specs": {
+        "storage": "128 Go · 6 Go RAM",
+        "display": "6.67\" AMOLED 120 Hz",
+        "camera": "108 MP",
+        "chip": "Helio G99 Ultra",
+        "battery": "5500 mAh"
+      },
+      "imageUrl": "/src/assets/images/horon_xiaomi_redmi_1795008052902.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-11-01T08:00:00.000Z"
+    },
+    {
+      "id": "prod-redmi-pad-pro",
+      "name": "Xiaomi Redmi Pad Pro 12.1\" 256 Go",
+      "brand": "XIAOMI / REDMI",
+      "category": "Tablettes",
+      "productType": "tablet",
+      "priceXof": 210000,
+      "stock": 5,
+      "availability": "In Stock",
+      "description": "Écran 2.5K 120 Hz de 12,1 pouces et batterie haute capacité 10000 mAh dans un boîtier unibody métallique.",
+      "specs": {
+        "storage": "256 Go · 8 Go RAM",
+        "display": "12.1\" 2.5K 120 Hz",
+        "chip": "Snapdragon 7s Gen 2",
+        "battery": "10000 mAh"
+      },
+      "imageUrl": "/src/assets/images/horon_ipad_pro_1795008052755.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-10-30T10:00:00.000Z"
+    },
+    {
+      "id": "prod-redmi-buds-6",
+      "name": "Xiaomi Redmi Buds 6 Pro",
+      "brand": "XIAOMI / REDMI",
+      "category": "AirPods & Écouteurs",
+      "productType": "accessory",
+      "priceXof": 48000,
+      "stock": 12,
+      "availability": "In Stock",
+      "description": "Écouteurs sans fil à réduction active du bruit et double haut-parleur haute fidélité.",
+      "specs": {
+        "battery": "Jusqu'à 36h d'autonomie"
+      },
+      "imageUrl": "/src/assets/images/horon_airpods_audio_1795009755352.jpg",
+      "featured": false,
+      "popular": false,
+      "createdAt": "2026-10-29T10:00:00.000Z"
+    }
+  ],
+  "orders": []
+}

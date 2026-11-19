@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #ffffff;
+    color: #111318;
+    scroll-behavior: auto;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Smooth hairline scroll indicator animation */
+@keyframes scroll-line {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.animate-scroll-line {
+  animation: scroll-line 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+@keyframes horon-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-horon-marquee {
+  display: flex;
+  width: max-content;
+  animation: horon-marquee 26s linear infinite;
+}
+
+.animate-horon-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Minimal Gradient Motion — GPU-accelerated curved edge ribbons & flowing waves (8s–16s) */
+.edge-motion-layer {
+  will-change: transform, opacity;
+}
+
+@keyframes horon-edge-left {
+  0% {
+    transform: translate3d(-3%, -10%, 0) rotate(-8deg) scale(1);
+    opacity: 0.78;
+  }
+  50% {
+    transform: translate3d(6%, 12%, 0) rotate(7deg) scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-3%, -10%, 0) rotate(-8deg) scale(1);
+    opacity: 0.78;
+  }
+}
+
+@keyframes horon-edge-right {
+  0% {
+    transform: translate3d(3%, 10%, 0) rotate(7deg) scale(1.05);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate3d(-6%, -12%, 0) rotate(-8deg) scale(0.96);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(3%, 10%, 0) rotate(7deg) scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes horon-edge-arc {
+  0% {
+    transform: translate3d(-12%, 0, 0) scaleX(0.94);
+    opacity: 0.68;
+  }
+  50% {
+    transform: translate3d(12%, 2%, 0) scaleX(1.08);
+    opacity: 0.98;
+  }
+  100% {
+    transform: translate3d(-12%, 0, 0) scaleX(0.94);
+    opacity: 0.68;
+  }
+}
+
+@keyframes horon-edge-sweep {
+  0% {
+    transform: translate3d(-14%, 0, 0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translate3d(14%, 0, 0);
+    opacity: 0.92;
+  }
+  100% {
+    transform: translate3d(-14%, 0, 0);
+    opacity: 0.55;
+  }
+}
+
+.anim-edge-left {
+  animation-name: horon-edge-left;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.anim-edge-right {
+  animation-name: horon-edge-right;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.anim-edge-arc {
+  animation-name: horon-edge-arc;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.anim-edge-sweep {
+  animation-name: horon-edge-sweep;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Pearl-grey radial showroom surfaces (pure white center -> soft silver/pearl outer edges) */
+.horon-surface-white {
+  background: radial-gradient(
+    ellipse 80% 70% at 50% 50%,
+    #ffffff 38%,
+    #f7f8fa 70%,
+    #e9ecf2 100%
+  );
+}
+
+.horon-surface-pearl {
+  background: radial-gradient(
+    ellipse 78% 68% at 50% 48%,
+    #ffffff 28%,
+    #f2f4f8 66%,
+    #e3e7ef 100%
+  );
+}
+
+@keyframes horon-radar-pulse {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.65;
+  }
+  70% {
+    transform: scale(2.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.1);
+    opacity: 0;
+  }
+}
+
+@keyframes horon-route-flow {
+  0% {
+    stroke-dashoffset: 380;
+    opacity: 0.35;
+  }
+  55% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  85% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -380;
+    opacity: 0.25;
+  }
+}
+
+.anim-radar-pulse {
+  animation: horon-radar-pulse 3.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.anim-route-flow {
+  stroke-dasharray: 380;
+  animation: horon-route-flow 7.5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll-line,
+  .animate-horon-marquee,
+  .edge-motion-layer,
+  .anim-radar-pulse,
+  .anim-route-flow {
+    animation: none !important;
+  }
+}
