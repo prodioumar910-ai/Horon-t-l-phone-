@@ -37,6 +37,17 @@ const QUALITY_VIDEO_SCRUB_FILE = path.join(CACHE_DIR, 'quality-video-scrub.mp4')
 const QUALITY_VIDEO_GITHUB_URL =
   'https://github.com/prodioumar910-ai/Horon-phone-/raw/refs/heads/main/Man_testing_smartphone_water_res%E2%80%A6_0d60a9f9.mp4';
 
+function resolveBundledMediaDir(): string | null {
+  const candidates = [
+    path.resolve(__dirname, 'dist', 'media'),
+    path.resolve(__dirname, 'public', 'media'),
+  ];
+  for (const dir of candidates) {
+    if (fs.existsSync(dir)) return dir;
+  }
+  return null;
+}
+
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'horon-bamako-2026';
 const TOKEN_SECRET =
   process.env.ADMIN_SESSION_SECRET ||
@@ -168,16 +179,30 @@ async function startServer(): Promise<void> {
 
   app.use('/uploads', express.static(UPLOADS_DIR));
 
-  // GitHub source MP4 video frame extraction & streaming for instant canvas scroll scrubbing
-  let qualityFramesPromise: Promise<string[]> | null = null;
-  async function ensureQualityFrames(): Promise<string[]> {
+  // Serve bundled static frames/video first, with optional runtime cache/ffmpeg fallback
+  let qualityFramesPromise: Promise<{ dir: string; files: string[] }> | null = null;
+  async function ensureQualityFrames(): Promise<{ dir: string; files: string[] }> {
+    const bundledDir = resolveBundledMediaDir();
+    if (bundledDir) {
+      const bundledFramesDir = path.join(bundledDir, 'quality-frames');
+      if (fs.existsSync(bundledFramesDir)) {
+        const bundledFiles = fs
+          .readdirSync(bundledFramesDir)
+          .filter((f) => /^frame_\d+\.jpg$/.test(f))
+          .sort();
+        if (bundledFiles.length > 0) {
+          return { dir: bundledFramesDir, files: bundledFiles };
+        }
+      }
+    }
+
     ensureStorage();
     const existing = fs
       .readdirSync(FRAMES_DIR)
       .filter((f) => /^frame_\d+\.jpg$/.test(f))
       .sort();
     if (existing.length > 0) {
-      return existing;
+      return { dir: FRAMES_DIR, files: existing };
     }
 
     if (!qualityFramesPromise) {
@@ -204,10 +229,11 @@ async function startServer(): Promise<void> {
           path.join(FRAMES_DIR, 'frame_%03d.jpg'),
         ]);
 
-        return fs
+        const extracted = fs
           .readdirSync(FRAMES_DIR)
           .filter((f) => /^frame_\d+\.jpg$/.test(f))
           .sort();
+        return { dir: FRAMES_DIR, files: extracted };
       })().finally(() => {
         qualityFramesPromise = null;
       });
@@ -217,7 +243,7 @@ async function startServer(): Promise<void> {
 
   app.get('/api/media/quality-frames/meta', async (_req, res) => {
     try {
-      const files = await ensureQualityFrames();
+      const { files } = await ensureQualityFrames();
       res.setHeader('Cache-Control', 'public, max-age=3600');
       res.json({ count: files.length, width: 640, height: 360 });
     } catch (err) {
@@ -228,7 +254,7 @@ async function startServer(): Promise<void> {
 
   app.get('/api/media/quality-frames/:index', async (req, res) => {
     try {
-      const files = await ensureQualityFrames();
+      const { dir, files } = await ensureQualityFrames();
       const idx = Math.max(1, Math.min(files.length, parseInt(req.params.index, 10) || 1));
       const fileName = files[idx - 1];
       if (!fileName) {
@@ -237,19 +263,25 @@ async function startServer(): Promise<void> {
       }
       res.setHeader('Content-Type', 'image/jpeg');
       res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
-      res.sendFile(path.join(FRAMES_DIR, fileName));
+      res.sendFile(path.join(dir, fileName));
     } catch (err) {
       console.error('Erreur lecture trame GitHub:', err);
       res.status(502).end();
     }
   });
 
-  // GitHub source MP4 video proxy transcoded with all-keyframes (-g 1)
+  // Bundled MP4 or fallback GitHub proxy transcoded with all-keyframes (-g 1)
   let qualityVideoFetchPromise: Promise<void> | null = null;
   app.get('/api/media/quality-video', async (req, res) => {
     try {
-      ensureStorage();
-      if (!fs.existsSync(QUALITY_VIDEO_SCRUB_FILE)) {
+      const bundledDir = resolveBundledMediaDir();
+      const bundledVideo = bundledDir ? path.join(bundledDir, 'quality-video.mp4') : null;
+      let fileToServe =
+        bundledVideo && fs.existsSync(bundledVideo) ? bundledVideo : '';
+
+      if (!fileToServe) {
+        ensureStorage();
+        if (!fs.existsSync(QUALITY_VIDEO_SCRUB_FILE)) {
         if (!qualityVideoFetchPromise) {
           qualityVideoFetchPromise = (async () => {
             if (!fs.existsSync(QUALITY_VIDEO_FILE)) {
@@ -300,11 +332,11 @@ async function startServer(): Promise<void> {
           });
         }
         await qualityVideoFetchPromise;
+        }
+        fileToServe = fs.existsSync(QUALITY_VIDEO_SCRUB_FILE)
+          ? QUALITY_VIDEO_SCRUB_FILE
+          : QUALITY_VIDEO_FILE;
       }
-
-      const fileToServe = fs.existsSync(QUALITY_VIDEO_SCRUB_FILE)
-        ? QUALITY_VIDEO_SCRUB_FILE
-        : QUALITY_VIDEO_FILE;
       const stat = fs.statSync(fileToServe);
       const fileSize = stat.size;
       const range = req.headers.range;

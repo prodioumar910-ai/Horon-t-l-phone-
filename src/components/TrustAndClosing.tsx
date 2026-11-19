@@ -51,16 +51,17 @@ export const TrustAndClosing: React.FC<TrustAndClosingProps> = ({
   const frameRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [frameCount, setFrameCount] = useState<number>(108);
+  const [useVideoFallback, setUseVideoFallback] = useState<boolean>(false);
 
   // Filtrer l'ancienne carte "Produits de qualité" remplacée par la séquence vidéo défilante
   const remainingPillars = siteConfig.trustPillars.filter(
     (p) => p.id !== 'tp-1' && p.title.toLowerCase() !== 'produits de qualité',
   );
 
-  // Récupérer le nombre réel de trames extraites de la vidéo GitHub
+  // Récupérer le nombre réel de trames embarquées dans /media/quality-frames/
   useEffect(() => {
     let active = true;
-    fetch('/api/media/quality-frames/meta')
+    fetch('/media/quality-frames/meta.json')
       .then((res) => (res.ok ? res.json() : null))
       .then((data: { count?: number } | null) => {
         if (active && data?.count && data.count > 0) {
@@ -75,12 +76,12 @@ export const TrustAndClosing: React.FC<TrustAndClosingProps> = ({
     };
   }, []);
 
-  // Séquence d'images haute fluidité sur Canvas (zéro blocage autoplay / codec / seeking navigateur)
+  // Séquence d'images haute fluidité sur Canvas (actifs statiques embarqués, zéro dépendance ffmpeg au déploiement)
   useEffect(() => {
     const track = scrollTrackRef.current;
     const frame = frameRef.current;
     const canvas = canvasRef.current;
-    if (!track || !frame || !canvas || reducedMotion) return;
+    if (!track || !frame || !canvas || reducedMotion || useVideoFallback) return;
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
@@ -88,6 +89,11 @@ export const TrustAndClosing: React.FC<TrustAndClosingProps> = ({
     let cancelled = false;
     const loadedImages: Array<HTMLImageElement | null> = new Array(frameCount).fill(null);
     let lastDrawnIdx = -1;
+    let loadedCount = 0;
+    let failedCount = 0;
+
+    const getFrameUrl = (idx: number) =>
+      `/media/quality-frames/frame_${String(idx + 1).padStart(3, '0')}.jpg`;
 
     const drawFrame = (targetIdx: number) => {
       let bestImg = loadedImages[targetIdx];
@@ -130,6 +136,7 @@ export const TrustAndClosing: React.FC<TrustAndClosingProps> = ({
       img.decoding = 'async';
       img.onload = () => {
         if (cancelled) return;
+        loadedCount += 1;
         loadedImages[idx] = img;
         if (idx === 0 && lastDrawnIdx === -1) {
           drawFrame(0);
@@ -138,9 +145,15 @@ export const TrustAndClosing: React.FC<TrustAndClosingProps> = ({
         loadNext();
       };
       img.onerror = () => {
-        if (!cancelled) loadNext();
+        if (cancelled) return;
+        failedCount += 1;
+        if (loadedCount === 0 && (idx === 0 || failedCount >= 4)) {
+          setUseVideoFallback(true);
+          return;
+        }
+        loadNext();
       };
-      img.src = `/api/media/quality-frames/${idx + 1}`;
+      img.src = getFrameUrl(idx);
     };
 
     for (let w = 0; w < concurrency; w++) {
@@ -183,7 +196,7 @@ export const TrustAndClosing: React.FC<TrustAndClosingProps> = ({
       cancelled = true;
       window.cancelAnimationFrame(rafId);
     };
-  }, [frameCount, reducedMotion]);
+  }, [frameCount, reducedMotion, useVideoFallback]);
 
   const renderPillarCard = (pillar: TrustPillar, keyPrefix: string) => (
     <div
@@ -248,10 +261,11 @@ export const TrustAndClosing: React.FC<TrustAndClosingProps> = ({
               }}
             >
               <div className="relative w-full h-[58vh] sm:h-[74vh] lg:h-[84vh] bg-[#111318]">
-                {reducedMotion ? (
+                {reducedMotion || useVideoFallback ? (
                   <video
-                    src="/api/media/quality-video"
-                    controls
+                    src="/media/quality-video.mp4"
+                    poster="/media/quality-frames/frame_001.jpg"
+                    controls={reducedMotion}
                     muted
                     playsInline
                     loop
@@ -262,7 +276,7 @@ export const TrustAndClosing: React.FC<TrustAndClosingProps> = ({
                 ) : (
                   <>
                     <img
-                      src="/api/media/quality-frames/1"
+                      src="/media/quality-frames/frame_001.jpg"
                       alt="Démonstration de qualité HORON PHONE"
                       className="absolute inset-0 w-full h-full object-cover"
                     />
